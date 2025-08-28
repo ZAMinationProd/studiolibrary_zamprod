@@ -97,7 +97,7 @@ class Node(object):
         :rtype: str
         """
         if self._namespace is None:
-            self._namespace = ":".join(self.shortname().split(":")[:-1])
+            self._namespace = self.shortname().split(":")[0]
         return self._namespace
 
     def stripFirstPipe(self):

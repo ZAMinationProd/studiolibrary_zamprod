@@ -51,7 +51,7 @@ def getFromDagPath(dagPath):
     :rtype: str
     """
     shortName = dagPath.split("|")[-1]
-    namespace = ":".join(shortName.split(":")[:-1])
+    namespace = shortName.split(":")[0]
     return namespace
 
 
